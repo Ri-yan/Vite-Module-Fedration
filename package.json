@@ -1,0 +1,27 @@
+{
+  "name": "mf-root",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w host\" \"npm run dev -w remote1\" \"npm run dev -w remote2\"",
+    "build": "npm run build -ws",
+    "preview": "concurrently \"npm run preview -w host\" \"npm run preview -w remote1\" \"npm run preview -w remote2\"",
+    "lint": "eslint .",
+    "build-remote1": "npm run build -w remote1",
+    "preview-remote1": "cd apps/remote1 && npm run preview",
+    "build-remote2": "npm run build -w remote2",
+    "preview-remote2": "cd apps/remote2 && npm run preview",
+    "start": "npm run build-remote1 && npm run build-remote2 && concurrently \"npm run preview-remote1\" \"npm run preview-remote2\" \"npm run dev -w host\""
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.25.0",
+    "@eslint/js": "^9.25.0",
+    "globals": "^16.0.0"
+  }
+}
