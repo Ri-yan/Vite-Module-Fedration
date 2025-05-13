@@ -11,7 +11,8 @@ export default defineConfig({
       exposes: {
         './App': './src/App.jsx'
       },
-      shared: ['react', 'react-dom', 'react-router-dom']
+      shared: ['react', 'react-dom', 'react-router-dom'],
+      dev: true
     })
   ],
   build: {
@@ -24,6 +25,7 @@ export default defineConfig({
     port: 5001,
     strictPort: true,
     cors: true,
+    hmr: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, OPTIONS",

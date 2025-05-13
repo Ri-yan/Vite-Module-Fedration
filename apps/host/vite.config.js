@@ -32,6 +32,7 @@ export default defineConfig(({ mode }) => {
       port: 5000,
       strictPort: true,
       cors: true,
+      hmr: true,
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, OPTIONS",

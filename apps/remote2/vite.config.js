@@ -24,6 +24,7 @@ export default defineConfig({
     port: 5003,
     strictPort: true,
     cors: true,
+    hmr: true,
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, OPTIONS",
