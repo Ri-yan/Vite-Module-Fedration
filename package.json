@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "concurrently \"npm run dev -w host\" \"npm run dev -w remote1\" \"npm run dev -w remote2\"",
     "build": "npm run build -ws",
+    "serve": "concurrently \"npm run serve -w host\" \"npm run serve -w remote1\" \"npm run serve -w remote2\"",
     "preview": "concurrently \"npm run preview -w host\" \"npm run preview -w remote1\" \"npm run preview -w remote2\"",
     "lint": "eslint .",
     "build-remote1": "npm run build -w remote1",

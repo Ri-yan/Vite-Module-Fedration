@@ -53,7 +53,7 @@ This will run all applications concurrently:
 
 - Host: http://localhost:5000
 - Remote1: http://localhost:5001
-- Remote2: http://localhost:5003
+- Remote2: http://localhost:5002
 
 ### Building
 
@@ -71,7 +71,7 @@ build-prod.bat    # Production build
 2. Update environment files with the new remote's URL:
 
    ```
-   VITE_REMOTE3_URL=http://localhost:5003
+   VITE_REMOTE3_URL=http://localhost:5002
    ```
 
 3. Update the host's vite.config.js to include the new remote:
@@ -241,7 +241,7 @@ apps/remote*/
 
    - Host: http://localhost:5000
    - Remote1: http://localhost:5001
-   - Remote2: http://localhost:5003
+   - Remote2: http://localhost:5002
 
 4. Build for deployment:
    ```bash

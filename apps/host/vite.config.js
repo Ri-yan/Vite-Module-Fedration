@@ -12,11 +12,15 @@ export default defineConfig(({ mode }) => {
         name: "host",
         remotes: {
           remote1: {
-            external: "http://localhost:5001/assets/remoteEntry.js",
+            external: false?"http://localhost:5001/remoteEntry.js":env.VITE_REMOTE1_URL,
             format: "esm",
             from: "vite",
           },
-          remote2: "http://localhost:5003/assets/remoteEntry.js",
+          remote2:{
+            external: false?"http://localhost:5002/remoteEntry.js":env.VITE_REMOTE2_URL,
+            format: "esm",
+            from: "vite",
+          }
         },
         shared: ["react", "react-dom", "react-router-dom"],
         dev: true,

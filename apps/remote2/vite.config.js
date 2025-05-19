@@ -21,7 +21,7 @@ export default defineConfig({
     cssCodeSplit: false,
   },
   server: {
-    port: 5003,
+    port: 5002,
     strictPort: true,
     cors: true,
     hmr: true,
@@ -32,7 +32,7 @@ export default defineConfig({
     },
   },
   preview: {
-    port: 5003,
+    port: 5002,
     strictPort: true,
     cors: true,
     headers: {
@@ -61,7 +61,7 @@ export default defineConfig({
 //     })
 //   ],
 //   server: {
-//     port: 5003,
+//     port: 5002,
 //     cors: true,
 //     headers: {
 //       'Access-Control-Allow-Origin': '*'
